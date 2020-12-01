@@ -19,6 +19,11 @@ tenor = tenorpy.Tenor()
 async def on_ready():
     print('bot ready')
 
+@bot.command()
+async def health(ctx):
+    await ctx.send(f"I'm great {ctx.message.author.mention} thank youwu! (⁄ ⁄•⁄ω⁄•⁄ ⁄)")
+    await ctx.send(tenor.random('anime happy hug'))
+
 @bot.event
 async def on_member_join(member):
     for channel in member.guild.text_channels:
