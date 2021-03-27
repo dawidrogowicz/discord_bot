@@ -1,12 +1,10 @@
 import discord
 import tenorpy
-from os import getenv
+import os
 from dotenv import load_dotenv
 from discord.ext import commands
 
-load_dotenv()
-
-BOT_TOKEN=getenv('BOT_TOKEN')
+BOT_TOKEN=os.environ['BOT_TOKEN']
 
 intents = discord.Intents.default()
 intents.members = True
