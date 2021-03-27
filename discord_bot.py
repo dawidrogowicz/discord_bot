@@ -1,16 +1,16 @@
 import discord
-import tenorpy
+import TenGiphPy
 import os
 from discord.ext import commands
 
 BOT_TOKEN=os.getenv('BOT_TOKEN')
+TENOR_TOKEN=os.getenv('TENOR_TOKEN')
 
 intents = discord.Intents.default()
 intents.members = True
 
 bot = commands.Bot(command_prefix='UwU ',intents=intents)
-tenor = tenorpy.Tenor()
-
+tenor = TenGiphPy.Tenor(token=TENOR_TOKEN)
 
 @bot.event
 async def on_ready():
