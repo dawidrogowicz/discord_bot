@@ -1,7 +1,6 @@
 import discord
 import tenorpy
 import os
-from dotenv import load_dotenv
 from discord.ext import commands
 
 BOT_TOKEN=os.environ['BOT_TOKEN']
