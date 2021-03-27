@@ -3,7 +3,7 @@ import tenorpy
 import os
 from discord.ext import commands
 
-BOT_TOKEN=os.environ['BOT_TOKEN']
+BOT_TOKEN=os.getenv('BOT_TOKEN')
 
 intents = discord.Intents.default()
 intents.members = True
